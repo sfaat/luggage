@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+<div class="tm-main-content" id="top">
+    <div class="tm-top-bar-bg"></div>
+    <div class="tm-top-bar" id="tm-top-bar">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg narbar-light">
+                    {% block nav %}
+                        <img src="{% static 'assets/img/Poterfax.png' %}" width="15%">
+                        
+                    <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                        <ul class="navbar-nav ml-auto">
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'calculator' %}">Calculator<span class="sr-only"></span></a>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'customer' %}">Signup/Login</a>
+                          </li>
+                        </ul>
+                    </div>
+                    {% endblock nav %}
+                </nav>            
+            </div>
+        </div>
+    </div>
+
+{% block content %}
+<form action="{% url 'search_location' %}" method="POST">
+    {% csrf_token %}
+   
+<div class="jumbotron" style="background-color:rgb(28, 11, 124);padding:2%">
+    <div class="row">
+            <div class="col-md-2">
+                <select name="trip_type" class="form-control tm-select" id="trip_type" onchange="changeTrip()">
+                    <option value="one-way" id="id1">one-way</option>
+                    <option value="round-trip" id="id2">round-trip</option>
+                    <option value="return1" id="id3">return</option>
+                </select>
+            </div>
+        <div class="col-md-2">
+            <select name="laguage_type" class="form-control tm-select" id="laguage_type">
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row pt-2">
+        <div class="col-md-4">
+            <div class="form-group">  
+                <input name="from1" type="text" class="form-control " id="from" placeholder="From....." value={{from1}}>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input name="to" type="text" class="form-control" id="to" placeholder="To...." value={{to}}>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                
+                <input name="inputCheckIn" type="text" class="form-control" id="inputCheckIn" placeholder="Arrival" value={{inputCheckIn}}>
+            </div>
+        </div>
+        <div class="col-md-2" id="return">
+            <div class="form-group">
+                <input type="date" class="form-control" name="frmDateReg" placeholder="Return" value={{frmDateReg}}>
+            </div>
+        </div>
+        <div class="col-md-2" id="s1">
+            <button type="submit" value="submit"class="btn btn-info tm-btn-search">Search</button>            
+        </div>
+    </div>
+</div>
+</form>
+</div
+
+<div class="container jumbotron">
+    <div class="col-md-8 offset-md-2 col-sm-8 offset-sm-4 shadow pt-5 pb-5">
+    <small><i class="far fa-arrow-circle-down fa-2x"></i>Send my carry-on from Los Angeles on  </small><br/>         
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td><input type="radio" name="colors" id="red"></td>
+                <td><strong class="text-primary">Fed</strong><b class="text-danger">Ex</b></td>
+                <td> <a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
+                <td><b>$29.66</b></td>
+            </a>
+            </tr>
+            <tr>
+                <td><input type="radio" name="colors" id="red"></td>
+                <td><strong class="text-danger">Up</strong><b class="text-primary">X</b></td>
+                
+                <td> <a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
+                <td><b>$29.66</b></td>
+            </tr>
+            <tr>
+            <td><input type="radio" name="colors" id="red"></td>
+            <td><strong class="text-primary">Fed</strong><b class="text-danger">Ex</b></td>
+              
+              <td> <a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
+              <td><b>$29.66</b></td>
+            </tr>
+          </tbody>
+    </table>
+    <small>Deliver to Baltimore by Friday, December 31</small>
+</div>
+</div>
+
+{% endblock content %}

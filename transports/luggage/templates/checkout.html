@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col-md-8">
+            
+            <small style="float: left; color: black; size: 25px; "><i class="far fa-arrow-circle-down fa-2x"></i>Your recommanded address</small> <a href="" style="float: right; color: rgb(26, 230, 216);"><db>hold for pickup</db></a>
+            
+        </div>
+    </div>
+<div class="row">
+    <div class="col-md-8 pt-2 pb-5">        
+        <div class="container pt-5 pb-5" style="border: 1px solid black;">
+            <label for="exampleDataList" class="form-label">Datalist example</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Company"><br/>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Contact"><br/>
+            <div class="row">
+                <div class="col-md-8 pt-2 pb-5">
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Address 1">
+                </div>
+                <div class="col-md-4 pt-2 pb-5">
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Address 2">
+                </div>
+            </div><br/>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="City"><br/>
+            <div class="row">
+                <div class="col-md-6 pt-2 pb-5">
+                    <select name="adult" class="form-control tm-select" id="adult" >
+                        <option value="up">up</option>
+                        <option value="Bihar">bihar</option>
+                        <option value="delhi">delhi</option>
+                    </select>
+                </div>
+                <div class="col-md-6 pt-2 pb-5">
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Postal Code">
+                </div>
+            </div>
+            <a href="" style="float: right; margin-left: 10px;">Cancel</a>
+            <a href="{% url 'checkout1' %}" style="float: right; margin-left: 10px;"><input type="submit" class="btn btn-primary" style="float: right;" value="save"></a>
+            
+        </div>    
+    </div>
+
+    <div class="col-md-4">
+        <div class="container pt-5 pb-5">
+            <samp>Los Angeles to reachmod</samp>
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Transit</p>
+                    <p>Minimal Plan</p>
+                </div>
+                <div class="col-md-4">
+                    <p>$254244</p>
+                    <p>$54554554</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <p><b>Total price</b></p>
+                </div>
+                <div class="col-md-4">
+                    <p><b>$334</b></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+{% endblock content %}

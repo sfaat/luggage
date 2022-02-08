@@ -1,0 +1,50 @@
+<form action="" method="POST">
+    {% csrf_token %}
+   
+<div class="jumbotron" style="background-color:rgb(28, 11, 124);padding:2%">
+    <div class="row">
+            <div class="col-md-2">
+                <select name="trip_type" class="form-control tm-select" id="trip_type" onchange="changeTrip()">
+                    <option value="one-way" id="id1">one-way</option>
+                    <option value="round-trip" id="id2">round-trip</option>
+                    <option value="return1" id="id3">return</option>
+                </select>
+            </div>
+        <div class="col-md-2">
+            <select name="laguage_type" class="form-control tm-select" id="laguage_type">
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row pt-2">
+        <div class="col-md-4">
+            <div class="form-group">  
+                <input name="from1" type="text" class="form-control " id="from" placeholder="From....." value={{from1}}>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input name="to" type="text" class="form-control" id="to" placeholder="To...." value={{to}}>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                
+                <input name="inputCheckIn" type="text" class="form-control" id="inputCheckIn" placeholder="Arrival" value={{inputCheckIn}}>
+            </div>
+        </div>
+        <div class="col-md-2" id="return" style="display:none">
+            <div class="form-group">
+                <input type="date" class="form-control" name="frmDateReg" placeholder="Return" value={{frmDateReg}}>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" value="submit" class="btn btn-info tm-btn-search">Search</button>            
+        </div>
+    </div>
+</div>
+</form>
+</div>

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-2">
+            <h2 class="how"><strong>How it works</strong></h2>
+            <h5><strong>Ship your luggage, skis, boards, clubs - all of your stuff - with us.</strong></h5>
+            <p>We can all agree that dragging luggage around is awful in almost every way. If you’re wondering how to ship luggage, LugLess has made it easy and affordable. We let you ship on your terms by giving you options, and we also make sure you pay nowhere near what everyone else pays. Here’s how it works:</p>
+        </div>
+    </div>
+</div>
+<div class="container pt-5 pb-5">
+    <div class="row">
+            <div class="col-md-6 col-lg-4 offset-lg-2 col-sm-6">
+                <img src="{% static 'assets/img/hiw-done.webp' %}">
+            </div>
+            <div class="col-md-6 col-lg-5 offset-right-lg-1 col-sm-6">
+                <ol>
+                <strong><li class="how"><h3 class="how"><strong>Get labels</strong></h3></li></strong>
+                </ol>
+                <p>Bags aren’t very smart, so each one will need a shipping label attached in order to get it to its destination. You can get your labels in three ways: 1) print them out the old fashioned way, 2) opt to have Digital Labels sent to your phone, or 3) have us mail you pre-printed labels. You must securely attach it to your bag and place a copy of the label inside of your bag just in case. Your bag is going to be traveling far and wide, and your label is your ticket! If your label is not properly attached, it is at risk of falling off in transit. Without its ticket, your bag will probably be delayed, and may even be lost.</p>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-md-6 col-lg-4 offset-lg-2 col-sm-6">
+                <img src="{% static 'assets/img/hiw-send.webp' %}">
+            </div>
+            <div class="col-md-6 col-lg-5 offset-right-lg-1 col-sm-6">
+                <h3 class="how"><strong>2. Send bags</strong></h3>
+                <p>Now you need to get your luggage to UPS or FedEx depending on which labels you have. We'll suggest several nearby drop-off locations but you can use any location that is convenient. Or, you can utilize an existing pickup at your office or most hotels. You can also pay for a pickup at your home, work, or hotel during booking. You can drop your luggage off early or late, but that will probably affect the delivery date. Learn more about your options for sending luggage.                </p>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-md-6 col-lg-4 offset-lg-2 col-sm-6">
+                <img src="{% static 'assets/img/hiw-print.webp' %}">
+            </div>
+            <div class="col-md-6 col-lg-5 offset-right-lg-1 col-sm-6">
+                <h3 class="how"><strong>3. Travel light</strong></h3>
+                <p>This is the “travel without the baggage” part. Grab your iPad and head to the airport. Track your LugLess shipment from anywhere. We’ll notify you when your luggage arrives. If you do have any questions regarding your shipment status, it is more efficient to contact our carriers directly. They have 24/7 support for any shipping related questions!</p>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-md-6 col-lg-4 offset-lg-2 col-sm-6">
+                <img src="{% static 'assets/img/hiw-travel-light.webp' %}">
+            </div>
+            <div class="col-md-6 col-lg-5 offset-right-lg-1 col-sm-6">
+                <h3 class="how"><strong>4. Arrive relaxed</strong></h3>
+                <p>UPS or FedEx will deliver the luggage directly to your destination address and you get to skip the dreaded baggage claim. If you will not be available to accept your luggage, check out these other luggage delivery options. Please be sure to notify our carriers if you have any special delivery instructions such as security codes. If our carriers are unable to deliver due to an incorrect or incomplete address, your delivery date will be delayed.</p>
+            </div>
+        </div>
+        <div class="text-center pt-5 pb-3">
+            <a href="{% url 'booknow' %}" class="btn btn-primary" style="border-radius: 25px;" >Get Started</a>
+        </div>
+    </div>
+
+{% endblock content %}

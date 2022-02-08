@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Login</title>
+
+    <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <link href="{% static 'assets/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+</head>
+
+<div class="container">
+    <div class="row my-3">
+     <div class="col-sm-6 offset-sm-3">
+      <h3>Login</h3>
+      <hr>
+      {% if messages %}
+      {% for message in messages %}
+      <p {% if message.tags%} class="alert alert-{{message.tags}}"{% endif %}>{{message}}</p>
+      {% endfor %}
+      {% endif %}
+      <form action="" method="post" novalidate class="shadow p-5">
+       {% csrf_token %}
+       {% for fm in form %}
+       <div class="form-group mb-3">
+       {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small>
+       </div>
+       {% endfor %}
+       <small><a href="{% url 'passwordreset' %}">Forgot Password ?</a></small> <br>
+       <input type="submit" class="btn btn-primary mt-4" value="Login">
+       <br>
+       <!-- <div class="text-center text-primary fw-bold"><small>New to ShoppinglyX ? <a href="#"
+          class="text-danger">Create an Account</a> </small></div> -->
+          {% if form.non_field_errors %}
+          {% for error in form.non_field_errors %}
+          <p class="alert alert-danger my-3">{{error}}</p>
+          {% endfor %}
+          {% endif %}
+      </form>
+     </div>
+    </div>
+   </div>
+
+    <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'assets/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/sb-admin-2.min.js' %}"></script>
+
+</body>
+
+</html>

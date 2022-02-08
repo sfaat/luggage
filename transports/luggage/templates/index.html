@@ -1,0 +1,504 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+.tm-bg-imgindex {
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    /* -webkit-justify-content: center; */
+    -ms-flex-pack: center;
+    /* justify-content: center */
+}
+</style>
+<div class="tm-section tm-bg-imgindex" id="tm-section-1">
+                <div class="tm-bg-white ie-container-width-fix-2">
+                    <div class="container ie-h-align-center-fix">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 pt-5">
+                        <h4 class="hlo1"><strong>Skip the stress.Ship your <br/>luggage.</strong></h4>
+                        <p class="hlo2 pt-3"><strong>Finally, luggage shipping for the price of checking a bag.</strong></p>
+                    </div>
+                    <!-- <div class="col-md-5 col-lg-5 col-sm-6">
+                        <img src="{% static 'assets/img/Fly Poter/Banner_1_1400-x-515px.jpg' %}">
+                    </div> -->
+                </div>
+            </div> 
+            
+            <div class="tm-section-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="tm-section-title">We are here to help you?</h2>
+                            <!-- <p class="tm-color-white tm-section-subtitle">Subscribe to get our newsletters</p> -->
+                            <a href="{% url 'booknow' %}" class="tm-color-white tm-btn-white-bordered">Book Now</a>
+                        </div>                
+                    </div>
+                </div>        
+            </div>
+            <div class="tm-section tm-position-relative">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="tm-section-down-arrow">
+                    <polygon fill="#ee5057" points="0,0  100,0  50,60"></polygon>                   
+                </svg> 
+                <div class="container tm-pt-5 tm-pb-4" id="tm-section-4">
+                    <!-- <div class="row pb-5">
+                        <div class="col-md-12 text-center">
+                            <h3 class="tm-color-primary tm-article-title-1"><b><ins>How It Works</ins></b></h3>
+                        </div>
+                    </div> -->
+                    <div class="row text-center">
+                        <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article"> 
+                            <img src="{% static 'assets/img/Fly Poter/icons_1_200-x-200.png' %}">                           
+                            <!-- <i class="fa tm-fa-6x fas fa-truck-pickup tm-color-primary tm-margin-b-20"></i> -->
+                            <h3 class="tm-color-primary tm-article-title-1">Schedule Your Pick-Up</h3>
+                            <p>Go to our app or website, fill out your travel details and schedule a pick-up of your luggage on the time that is convenient for you</p>
+                            <!-- <a href="#" class="text-uppercase tm-color-primary tm-font-semibold">Continue reading...</a> -->
+                        </article>
+                        <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
+                            <img src="{% static 'assets/img/Fly Poter/icons_2_200-x-200.png' %}">                                                       
+                            <!-- <i class="fa tm-fa-6x fa-plane tm-color-primary tm-margin-b-20"></i> -->
+                            <h3 class="tm-color-primary tm-article-title-1">Ensure Collection</h3>
+                            <p>Give the service OTP to FlyyPorter’s delivery representatives who will collect your luggage. Receive a unique code which you can then use to track the status of your luggage</p>
+                            <!-- <a href="#" class="text-uppercase tm-color-primary tm-font-semibold">Continue reading...</a>                             -->
+                        </article>
+                        <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
+                            <img src="{% static 'assets/img/Fly Poter/icons_3_200-x-200.png' %}">                                                      
+                            <!-- <i class="fa tm-fa-6x fas fa-luggage-cart tm-color-primary tm-margin-b-20"></i> -->
+                            <h3 class="tm-color-primary tm-article-title-1">Go Baggage Less</h3>
+                            <p>Skip the long queues at the airport and enjoy your travel, free of stress</p>
+                            <!-- <a href="#" class="text-uppercase tm-color-primary tm-font-semibold">Continue reading...</a>                            -->
+                        </article>
+                    </div>        
+                </div>
+            </div>
+
+            <div class="container px-5">
+                <div class="row">
+                    <div class="col-md-6  col-sm-6 col-lg-6">
+                        <h3 class="hlo"><strong>Low Cost, High Satisfaction</strong></h3>
+                        <!-- <h5><strong>Backed by the reliability of FedEx® and UPS®</strong></h5> -->
+                        <p>Everyone wants to get the bang for the buck and FlyyPorter aims to offer just that. With the lowest costs and best services, we guarantee the highest satisfaction when it comes to travelling luggage less.</p>
+                    </div>
+                    <div class="col-md-6  col-sm-6 col-lg-6">
+                        <img src="{% static 'assets/img/Fly Poter/Low-cost,-high-satisfaction.png' %}" alt="img" width="100%">
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-md-6  col-sm-6 col-lg-6">
+                        <img src="{% static 'assets/img/Fly Poter/Travel-Stress-Free.jpg' %}" alt="img" width="100%">
+                    </div>
+                    <div class="col-md-6  col-sm-6 col-lg-6">
+                        <h3 class="hlo"><strong>Travel Stress Free</strong></h3>
+                        <!-- <h5><strong>Ship luggage, golf clubs, skis, or boxes</strong></h5> -->
+                        <p>Keeping track of your luggage, waiting in long queues and then waiting again at the pick-up juncture- now say goodbye to all of that! With our dedicated representatives taking care of your luggage needs, you can travel stress free and focus solely on your personal enjoyment.</p>
+                    </div>
+                </div>
+                <div class="row pt-5 pb-5">
+                    <div class="col-md-6  col-sm-6 col-lg-6">
+                        <h3 class="hlo"><strong>Effortless Travel and Ease of Use</strong></h3>
+                        <!-- <h5><strong>No printer required. Ship with just your phone.</strong></h5> -->
+                        <p>We believe in offering our services in a manner which makes them easy to use and understand. Our technology is accessible, up-to-date and our commitment to customer satisfaction is paramount. Minimising interaction points and ensuring contactless travel, FlyyPorter aims to make the entire premise of travel effortless.</p>
+                    </div>
+                    <div class="col-md-6  col-sm-6 col-lg-6">
+                        <img src="{% static 'assets/img/Fly Poter/Effortless-Travel-and-Ease-of-Use-2.png' %}" alt="img" width="100%">
+                    </div>
+                </div>
+                <!-- <div class="row pt-5 pb-5">
+                    <div class="col-md-6  col-sm-6 col-lg-6">
+                        <img src="{% static 'assets/img/scanner.jpg' %}" alt="img" width="100%">
+                    </div>
+                    <div class="col-md-6  col-sm-6 col-lg-6">
+                        <h3 class="hlo"><strong>Contactless travel</strong></h3>
+                        <h5><strong>Reduce contact points, avoid crowded areas</strong></h5>
+                        <p>Shipping luggage ahead is the fastest and safest way through the airport on both ends of your trip. Save time, minimize interactions at check-in, and avoid congregation points like the baggage carousel when you ship luggage ahead  with LugLess!</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="container">
+                <div class="jumbotron" style="background-color: rgb(233, 48, 48);">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="hlo1"><strong>The most convenient method of transporting bags</strong></h4>
+                        <p class="hlo2">We can't determine if the cost or the simplicity of utilizing Flyportr is the most appealing feature. And, to be honest, we're not convinced the answer matters.</p>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+                        <img src="{% static 'assets/img/Fly Poter/Book.png' %}" width="70%">
+                        <h4 style="color: white;"><strong>Book</strong></h4>
+                        <p class="hlo2">Anyone can make arrangements for servicing. 24 hours a day, 7 days a week in online mode.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+                        <img src="{% static 'assets/img/Fly Poter/Ship.png' %}" width="70%">
+                        <h4 style="color: white;"><strong>Ship</strong></h4>
+                        <p class="hlo2">Bring your baggage to a nearby carrier. They have the ability to scan, print, and attach labels. Alternatively, you can pay for a pickup.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+                        <img src="{% static 'assets/img/Fly Poter/Relax.png' %}" width="70%">
+                        <h4 style="color: white;"><strong>Relax</strong></h4>
+                        <p class="hlo2">Take only the basics to the airport and enjoy travelling without the luggage.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+                        <img src="{% static 'assets/img/Fly Poter/Collect.png' %}" width="70%">
+                        <h4 style="color: white;"><strong>Collect</strong></h4>
+                        <p class="hlo2">Flyportr will deliver your shipment to your specified location, where it will be ready for you when you arrive. On-time delivery is assured for all domestic deliveries. The process is simply reversed if you planned a round-trip cargo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <div class="container pt-5" id="tm-section-8">
+                <div class="row pb-5">
+                    <div class="col-md-6">
+                        <img src="{% static 'assets/img/Fly Poter/Untitled-1.png' %}" alt="img" width="70%">
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="tm-color-primary tm-article-title-1"><strong>FEATURES</strong></h5><br/>
+                        <h2><b>Air travel. Without the stress.</b></h2><br/>
+                        <p style="font-size:20px">Our technology keeps you relaxed, up-to-date and in control on travel day.</p><br/>
+                        <ul>
+                            <li>Track Your Bags From Doorstep To Plane</li><br/>
+                            <li>Digital baggage receipts</li><br/>
+                            <li>Fully Approved, Safe & Secure</li><br/>
+                            <li>Free Changes & Cancellation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container pt-3 pb-5 pt-5">
+                <div class="row pb-5">
+                    <div class="col-md-6">
+                        <h5 class="tm-color-primary tm-article-title-1"><strong>CALCULATOR</strong></h5><br/>
+                        <h2><b>Great pricing,unrivalled experience</b></h2><br/>
+                        <p style="font-size:20px">Airportr is available on flights from key airports in the UK and Switzerland. Our collections extend across Greater London & beyond, north-west England, and much of Switzerland.</p><br/>
+                    </div>
+                    <div class="col-md-6">
+                            <!-- <form  method="POST">
+                                {% csrf_token %} -->
+                                <div class="form-row">
+                                    <select class="custom-select my-1 mr-sm-2" name="city" id="city">
+                                    <option selected>I'm flying from...</option>
+                                    <option value="kolkata">kolkata</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Banglore">Banglore</option>
+                                    </select>
+                                    <div class="col">
+                                          <input type="text" class="form-control" placeholder="Enter Postcode" name="Postcode">
+                                        </div>
+                                      </div>
+                                      <div class="form-group pt-3">
+                                        <input type="text" id="bags" name="bags" class="form-control input-lg" placeholder="How many bags?"  required/>
+                                        </div>
+                                        <div class="form-group row">
+                                        <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm py-3"><b>Price From-</b></label>
+                                            <div class="col-sm-8">
+                                        <input type="text" class="form-control form-control-lg" id="myText" placeholder="$">
+                                    </div>
+                                </div>
+                                    <button onclick="hlo()" class="btn btn-primary tm-btn-primary">Get Price</button>
+                            <!-- </form> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container pb-5">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-sm-12">
+                            <h3 class="text-primary text-center"><strong>Ship your luggage, skis, boards, clubs - all of your stuff - with us.</strong></h3>
+                            <p class="text-center">We can all agree that dragging luggage around is awful in almost every way. If you’re wondering how to ship luggage, LugLess has made it easy and affordable. We let you ship on your terms by giving you options, and we also make sure you pay nowhere near what everyone else pays. Here’s how it works:</p>
+                        </div>
+                    </div>
+                    <ul class="nav nav-pills mb-3 nav justify-content-center"  id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#delhi" role="tab" aria-controls="home" aria-selected="true"><strong>Delhi </strong></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#mumbai" role="tab" aria-controls="profile" aria-selected="false"><strong>Mumbai </strong></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#kolkata" role="tab" aria-controls="contact" aria-selected="false"><strong>Hyderabad </strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#banglore" role="tab" aria-controls="contact" aria-selected="false"><strong>Bangalore </strong></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#banglore" role="tab" aria-controls="contact" aria-selected="false"><strong>Goa</strong></a>
+                          </li>  
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="delhi" role="tabpanel" aria-labelledby="home-tab">
+                        <img src="{% static 'assets/img/Fly Poter/Delhi.jpg' %}" alt="Image" class="pt-5" width="100%">
+                        <!-- <p>Aliquam ac lacus volutpat, dictum risus at, scelerisque nulla. Nullam sollicitudin at augue venenatis eleifend. Nulla ligula ligula, egestas sit amet viverra id, iaculis sit amet ligula.</p>
+                        <header><h3 class="text-uppercase tm-article-title-2">Nunc in felis aliquet metus luctus iaculis</h3></header> -->
+                    </div>
+                        <div class="tab-pane fade" id="mumbai" role="tabpanel" aria-labelledby="profile-tab">
+                            <img src="{% static 'assets/img/Fly Poter/MUMBAI.jpg' %}" alt="Image" width="100%" class="pt-5">
+                            <!-- <p>Aliquam ac lacus volutpat, dictum risus at, scelerisque nulla. Nullam sollicitudin at augue venenatis eleifend. Nulla ligula ligula, egestas sit amet viverra id, iaculis sit amet ligula.</p>
+                            <header><h3 class="text-uppercase tm-article-title-2">Nunc in felis aliquet metus luctus iaculis</h3></header> -->
+                        </div>
+                        <div class="tab-pane fade" id="kolkata" role="tabpanel" aria-labelledby="contact-tab">
+                            <img src="{% static 'assets/img/Fly Poter/Kolkata.jpg' %}" alt="Image" width="100%" class="pt-5">
+                            <!-- <p>Aliquam ac lacus volutpat, dictum risus at, scelerisque nulla. Nullam sollicitudin at augue venenatis eleifend. Nulla ligula ligula, egestas sit amet viverra id, iaculis sit amet ligula.</p>
+                            <header><h3 class="text-uppercase tm-article-title-2">Nunc in felis aliquet metus luctus iaculis</h3></header> -->
+                        </div>
+                        <div class="tab-pane fade" id="banglore" role="tabpanel" aria-labelledby="contact-tab">
+                            <img src="{% static 'assets/img/Fly Poter/BANGLORE.jpg' %}" alt="Image" width="100%" class="pt-5">
+                            <!-- <p>Aliquam ac lacus volutpat, dictum risus at, scelerisque nulla. Nullam sollicitudin at augue venenatis eleifend. Nulla ligula ligula, egestas sit amet viverra id, iaculis sit amet ligula.</p>
+                            <header><h3 class="text-uppercase tm-article-title-2">Nunc in felis aliquet metus luctus iaculis</h3></header> -->
+                        </div>
+                      </div>                      
+                </div>
+            
+            <!-- <div class="tm-section tm-section-pad tm-bg-gray" id="tm-section-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                            <div class="tm-article-carousel">                            
+                                <article class="tm-bg-white mr-2 tm-carousel-item">
+                                    <img src="{% static 'assets/img/img-01.jpg' %}" alt="Image" class="img-fluid">
+                                    <div class="tm-article-pad">
+                                        <header><h3 class="text-uppercase tm-article-title-2">Nunc in felis aliquet metus luctus iaculis</h3></header>
+                                        <p>Aliquam ac lacus volutpat, dictum risus at, scelerisque nulla. Nullam sollicitudin at augue venenatis eleifend. Nulla ligula ligula, egestas sit amet viverra id, iaculis sit amet ligula.</p>
+                                        <a href="#" class="text-uppercase btn-primary tm-btn-primary">Get More Info.</a>
+                                    </div>                                
+                                </article>                    
+                                <article class="tm-bg-white mr-2 tm-carousel-item">
+                                    <img src="{% static 'assets/img/img-02.jpg' %}" alt="Image" class="img-fluid">
+                                    <div class="tm-article-pad">
+                                        <header><h3 class="text-uppercase tm-article-title-2">Sed cursus dictum nunc quis molestie</h3></header>
+                                        <p>Pellentesque quis dui sit amet purus scelerisque eleifend sed ut eros. Morbi viverra blandit massa in varius. Sed nec ex eu ex tincidunt iaculis. Curabitur eget turpis gravida.</p>
+                                        <a href="#" class="text-uppercase btn-primary tm-btn-primary">View Detail</a>
+                                    </div>                                
+                                </article>
+                                <article class="tm-bg-white mr-2 tm-carousel-item">
+                                    <img src="{% static 'assets/img/img-01.jpg' %}" alt="Image" class="img-fluid">
+                                    <div class="tm-article-pad">
+                                        <header><h3 class="text-uppercase tm-article-title-2">Eget diam pellentesque interdum ut porta</h3></header>
+                                        <p>Aenean finibus tempor nulla, et maximus nibh dapibus ac. Duis consequat sed sapien venenatis consequat. Aliquam ac lacus volutpat, dictum risus at, scelerisque nulla.</p>
+                                        <a href="#" class="text-uppercase btn-primary tm-btn-primary">More Info.</a>
+                                    </div>                                
+                                </article>
+                                <article class="tm-bg-white mr-2 tm-carousel-item">
+                                    <img src="{% static 'assets/img/img-02.jpg' %}" alt="Image" class="img-fluid">
+                                    <div class="tm-article-pad">
+                                        <header><h3 class="text-uppercase tm-article-title-2">Lorem ipsum dolor sit amet, consectetur</h3></header>
+                                        <p>Suspendisse molestie sed dui eget faucibus. Duis accumsan sagittis tortor in ultrices. Praesent tortor ante, fringilla ac nibh porttitor, fermentum commodo nulla.</p>
+                                        <a href="#" class="text-uppercase btn-primary tm-btn-primary">Detail Info.</a>
+                                    </div>                                
+                                </article>                    
+                                <article class="tm-bg-white mr-2 tm-carousel-item">
+                                    <img src="{% static 'assets/img/img-01.jpg' %}" alt="Image" class="img-fluid">
+                                    <div class="tm-article-pad">
+                                        <header><h3 class="text-uppercase tm-article-title-2">Orci varius natoque penatibus et</h3></header>
+                                        <p>Pellentesque quis dui sit amet purus scelerisque eleifend sed ut eros. Morbi viverra blandit massa in varius. Sed nec ex eu ex tincidunt iaculis. Curabitur eget turpis gravida.</p>
+                                        <a href="#" class="text-uppercase btn-primary tm-btn-primary">Read More</a>
+                                    </div>                                
+                                </article>
+                                <article class="tm-bg-white tm-carousel-item">
+                                    <img src="{% static 'assets/img/img-02.jpg' %}" alt="Image" class="img-fluid">
+                                    <div class="tm-article-pad">
+                                        <header><h3 class="text-uppercase tm-article-title-2">Nullam sollicitudin at augue venenatis eleifend</h3></header>
+                                        <p>Aenean finibus tempor nulla, et maximus nibh dapibus ac. Duis consequat sed sapien venenatis consequat. Aliquam ac lacus volutpat, dictum risus at, scelerisque nulla.</p>
+                                        <a href="#" class="text-uppercase btn-primary tm-btn-primary">More Details</a>
+                                    </div>                                
+                                </article>
+                            </div>    
+                        </div>
+                        
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-recommended-container">
+                            <div class="tm-bg-white">
+                                <div class="tm-bg-primary tm-sidebar-pad">
+                                    <h3 class="tm-color-white tm-sidebar-title">Recommended Places</h3>
+                                    <p class="tm-color-white tm-margin-b-0 tm-font-light">Enamel pin cliche tilde, kitsch and VHS thundercats</p>
+                                </div>
+                                <div class="tm-sidebar-pad-2">
+                                    <a href="#" class="media tm-media tm-recommended-item">
+                                        <img src="{% static 'assets/img/tn-img-01.jpg' %}" alt="Image">
+                                        <div class="media-body tm-media-body tm-bg-gray">
+                                            <h4 class="text-uppercase tm-font-semibold tm-sidebar-item-title">Delhi</h4>
+                                        </div>                                        
+                                    </a>
+                                    <a href="#" class="media tm-media tm-recommended-item">
+                                        <img src="{% static 'assets/img/tn-img-02.jpg' %}" alt="Image">
+                                        <div class="media-body tm-media-body tm-bg-gray">
+                                            <h4 class="text-uppercase tm-font-semibold tm-sidebar-item-title">Kolkata</h4>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="media tm-media tm-recommended-item">
+                                        <img src="{% static 'assets/img/tn-img-03.jpg' %}" alt="Image">
+                                        <div class="media-body tm-media-body tm-bg-gray">
+                                            <h4 class="text-uppercase tm-font-semibold tm-sidebar-item-title">Mumbai</h4>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="media tm-media tm-recommended-item">
+                                        <img src="{% static 'assets/img/tn-img-04.jpg' %}" alt="Image">
+                                        <div class="media-body tm-media-body tm-bg-gray">
+                                            <h4 class="text-uppercase tm-font-semibold tm-sidebar-item-title">Banglore</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            
+            <div class="container pt-5 pb-5" id="tm-section-7">
+                <div class="col-md-12">
+                                
+                    <h3 class="tm-color-primary tm-article-title-1">Let us know when you're flying and we'll remind you closer to your flight!</h3>
+                    <p>Airportr will send you a trip reminder and occasional updates.</p
+                </div>
+            </div>
+
+
+            <!-- <div class="container">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-caption">
+                                <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen. </p> <img src="https://i.imgur.com/lE89Aey.jpg">
+                                <div id="image-caption">Nick Doe</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> <img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid">
+                                <div id="image-caption">Cromption Greves</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid">
+                                <div id="image-caption">Harry Mon</div>
+                            </div>
+                        </div>
+                    </div> <a class="carousel-control-prev" href="#demo" data-slide="prev"> <i class='fas fa-arrow-left'></i> </a> <a class="carousel-control-next" href="#demo" data-slide="next"> <i class='fas fa-arrow-right'></i> </a>
+                </div>
+            </div> -->
+
+            <section id="contact" class="contact">
+                <div class="container" data-aos="fade-up">
+          
+                  <div class="section-title text-center pt-3 pb-3">
+                    <h3><span>Contact Us</span></h3>
+                    
+                  </div>
+          
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-6">
+                      
+                      <div>
+                        <h3>Our Address</h3>
+                        <p>delho</p>
+
+                      </div>
+
+                      <div>
+                        <h3>Email Us</h3>
+                        <p>support@poterfax.com</p>
+
+                      </div>
+                      <div>
+                        <h3>Call Us</h3>
+                        <p>+91 99586 20005</p>
+                      </div>
+                    
+                      
+                    </div>
+                    <div class="col-lg-6">
+                      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                          <div class="col form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                          </div>
+                          <div class="col form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
+                      </form>
+                    </div>
+          
+                  </div>
+          
+                </div>
+              </section><!-- End Contact Section -->
+          
+
+            
+
+            <div class="tm-section tm-section-pad tm-bg-img tm-position-relative" id="tm-section-6">
+                <div class="container ie-h-align-center-fix">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-7">
+                            <div id="google-map"></div>        
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 mt-3 mt-md-0">
+                            <div class="tm-bg-white tm-p-4">
+                                <form  method="post" class="contact-form">
+                                    <div class="form-group">
+                                        <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="contact_subject" name="contact_subject" class="form-control" placeholder="Subject"  required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Message" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary tm-btn-primary">Send Message Now</button>
+                                </form>
+                            </div>                            
+                        </div>
+                    </div>        
+                </div>
+            </div>
+            <script>
+                function hlo(){
+                    var city = document.getElementById("city").value;
+                    var bags = document.getElementById("bags").value;
+                    var value;
+                    if (city == "kolkata"){
+                        value = bags*500;
+                    }else if (city == "Mumbai"){
+                        value = bags*600;
+                    }else if (city == "Delhi"){
+                        value = bags*700;
+                    }else if (city == "Chennai"){
+                        value = bags*800;
+                    }else {
+                        value = bags*900;
+                    }
+                    document.getElementById("myText").value = value;
+                }
+
+                function popup() {
+                    alert(" my team is send notification on you email as soon as,Thanks!!!");
+                }
+            </script>
+{% endblock content %}

@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+<div class="tm-main-content" id="top">
+    <div class="tm-top-bar-bg"></div>
+    <div class="tm-top-bar" id="tm-top-bar">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg narbar-light">
+                    {% block nav %}
+                        <img src="{% static 'assets/img/FlyypoterPNG.png' %}" width="15%">
+                    <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                        <ul class="navbar-nav ml-auto">
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'customer' %}">Signup/Login</a>
+                          </li>
+                          
+                        </ul>
+                    </div>
+                    {% endblock nav %}
+                </nav>            
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% block content %}
+  <div class="jumbotron" style="background-color:rgb(28, 11, 124);padding:2%">
+      <div class="row">
+            
+              <div class="col-md-2">
+                  <select name="trip_type" class="form-control tm-select" id="trip_type">
+
+                    {% if trip_type == "one-way" %}
+
+                      <option value="one-way" id="id1">one-way</option>
+                    {% elif trip_type == "round-trip" %}  
+                    
+                      <option value="round-trip" id="id2">round-trip</option>
+                    {% else %}  
+                    
+                      <option value="return1" id="id3">return</option>
+                    {% endif %}  
+                  </select>
+                  
+              </div>
+          <div class="col-md-2">
+              
+              <select name="laguage_type" class="form-control tm-select" id="laguage_type">
+                 {% if laguage_type == "small" %}
+                  <option value="small">small</option>
+                 {% elif laguage_type == "medium" %}  
+
+                  <option value="medium">medium</option>
+                 {% else %} 
+                  <option value="large">large</option> 
+                  {% endif %}   
+              </select>
+          </div>
+      </div>
+      <div class="row pt-2">
+          
+          <div class="col-md-4">
+              <div class="form-group">
+                  
+                  <input name="from1" type="text" class="form-control " id="from1" placeholder="From....." value="{{from1}}">
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="form-group">
+                  
+                <input name="to" type="text" class="form-control" id="to1" placeholder="To...."  value="{{to}}"> 
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="form-group">
+                  
+                  <input name="inputCheckIn" type="text" class="form-control" id="inputCheckIn" placeholder="Arrival"  value="{{inputCheckIn}}">
+              </div>
+          </div>
+          <div class="col-md-2" id="h">
+              <div class="form-group">
+                  <input type="text" class="form-control" name="frmDateReg" id="retuntype" placeholder="Return" value="{{frmDateReg}}">
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="form-group">
+                  <button type="submit" id="ret" class="btn btn-info tm-btn-search">Search</button>
+              </div>
+          </div>
+      
+      </div>
+  
+  </div>
+
+<div class="container pt-5 pb-5">
+    <div class="col-md-8 offset-md-2 col-sm-8 offset-sm-4 shadow pt-2 pb-2">
+    <small><i class="far fa-arrow-circle-down fa-2x"></i>Send my carry-on from Los Angeles on  </small><br/>         
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+        <td><input type="radio" name="colors" id="red"></td>
+        <td><strong class="text-primary">Fed</strong><b class="text-danger">Ex</b></td>
+          <td><b>Wednesday,december29</b></td>
+          <td><b>$29.66</b></td>
+        </tr>
+      </tbody>
+    </table>
+    <small>Deliver to Baltimore by Friday, December 31</small>
+</div>
+</div>
+
+<div class="container pb-5">
+    <small><i class="far fa-arrow-circle-down fa-2x"></i>Send my carry-on from Los Angeles on  </small><br/>
+    <div class="row">         
+        <div class="col-md-4">
+            <ul class="price">
+              <li class="header">Basic</li>
+              <li class="grey">$ 9.99 / year</li>
+              <li>Self-print labels</li>
+              <li>Drop off at UPS</li>
+              <li>Doorstep delivery</li>
+              <li>No support</li>
+              <li>Non-refundable</li>
+              <li>No guarantee <br><br><small><b>Show plan details</b></small></li>
+              <li class="grey"><a href="{% url 'checkout' %}" class="button">Sign Up</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-md-4">
+            <ul class="price">
+              <li class="header" style="background-color:#04AA6D">Pro</li>
+              <li class="grey">$ 24.99 / year</li>
+              <li>Self-print labels</li>
+              <li>Drop off at UPS</li>
+              <li>Doorstep delivery</li>
+              <li><b>$200 </b>coverage</li>
+              <li>Partially refundable</li>
+              <li>No guarantee <br><br><small><b>Show plan details</b></small></li>
+              <li class="grey"><a href="{% url 'checkout' %}" class="button">Sign Up</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-md-4">
+            <ul class="price">
+              <li class="header">Premium</li>
+              <li class="grey">$ 49.99 / year</li>
+              <li>Digital labels</li>
+              <li>Drop off at UPS</li>
+              <li>Doorstep delivery</li>
+              <li>$500 coverage</li>
+              <li>Chat, email support</li>
+              <li>Partially refundable <br><br><small><b>Show plan details</b></small></li>
+             
+              <li class="grey"><a href="{% url 'checkout' %}" class="button">Sign Up</a></li>
+            </ul>
+          </div>
+</div>
+</div>
+
+
+<script>
+</script>
+{% endblock content %}

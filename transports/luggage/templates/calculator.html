@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="container pb-5 pt-5">
+    
+        <!-- <div class="col-md-6"> -->
+                <!-- <form  method="POST">
+                    {% csrf_token %} -->
+                    <div class="form-row">
+                        
+                        <select class="custom-select my-1 mr-sm-2" name="city" id="city">
+                        <option selected>I'm flying from...</option>
+                        <option value="kolkata">kolkata</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Banglore">Banglore</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="form-group pt-3 col-md-6">
+                              <input type="text" class="form-control" placeholder="Enter Postcode" name="Postcode">
+                        </div>
+                          
+
+                        <div class="form-group pt-3 col-md-6">
+                            <input type="text" id="bags" name="bags" class="form-control input-lg" placeholder="How many bags?"  required/>
+                        </div>
+                    </div>
+
+                            <div class="form-group row">
+                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm py-3"><b>Price From-</b></label>
+                                <div class="col-sm-8">
+                            <input type="text" class="form-control form-control-lg" id="myText" placeholder="$">
+                        </div>
+                    </div>
+                        <button onclick="hlo()" class="btn btn-primary tm-btn-primary">Get Price</button>
+                <!-- </form> -->
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+
+
+
+
+    <script>
+        function hlo(){
+            var city = document.getElementById("city").value;
+            var bags = document.getElementById("bags").value;
+            var value;
+            if (city == "kolkata"){
+                value = bags*500;
+            }else if (city == "Mumbai"){
+                value = bags*600;
+            }else if (city == "Delhi"){
+                value = bags*700;
+            }else if (city == "Chennai"){
+                value = bags*800;
+            }else {
+                value = bags*900;
+            }
+            document.getElementById("myText").value = value;
+        }
+
+        function popup() {
+            alert(" my team is send notification on you email as soon as,Thanks!!!");
+        }
+    </script>
+
+
+{% endblock content %}
