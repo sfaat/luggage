@@ -3,6 +3,8 @@ from django.shortcuts import redirect, render
 from django.contrib import messages
 from .models import Notification, Price,Customer,FormField
 from django.views import View
+from django.core.mail import send_mail
+from django.conf import settings
 
 def notification(request):
     if request.method == "POST":
@@ -196,8 +198,38 @@ def calculator(request):
 
 
 def cookie(request):
-    
     return render(request,"cookie.html")
+
+def contactus(request):
+    if request.method=="POST":
+        name=request.POST.get('name')
+        email=request.POST.get('email')
+        phone=request.POST.get('phone')
+        subject=request.POST.get('subject')
+        message=request.POST.get('message')
+        # email = settings.EMAIL_HOST_USER
+        data={
+            'name':name,
+            'email':email,
+            'phone':phone,
+            'subject':subject,
+            'message':message
+        }
+
+        message= '''
+        Name: {}
+        Phone No :{}
+        message: {}
+        From: {}
+        subject :{}
+        '''.format(data['name'],data['phone'],data['message'],data['email'],data['subject'])
+        send_mail(subject, message, settings.EMAIL_HOST_USER, [email,],fail_silently=False)
+        
+    
+    
+    return render(request,'index.html')
+    
+        
       
 
     

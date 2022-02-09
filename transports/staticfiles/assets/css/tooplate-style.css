@@ -278,7 +278,7 @@ select.tm-select::-ms-expand { display: none; }
 
 .tm-btn-white-bordered {
 	display: inline-block;
-	/* padding: 10px 25px; */
+	padding: 10px 25px;
 	border: 2px solid white;
 	background: transparent;
 	text-transform: uppercase;
