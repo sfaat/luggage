@@ -7,7 +7,7 @@
             <div class="row">
                 <nav class="navbar navbar-expand-lg narbar-light">
                     {% block nav %}
-                        <img src="{% static 'assets/img/FlyypoterPNG.png' %}" width="15%">
+                        <img src="{% static 'assets/img/PoterFax1.png' %}" width="20%" height="80%">
                     <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -33,36 +33,30 @@
 {% block content %}
   <div class="jumbotron" style="background-color:rgb(28, 11, 124);padding:2%">
       <div class="row">
-            
-              <div class="col-md-2">
-                  <select name="trip_type" class="form-control tm-select" id="trip_type">
-
-                    {% if trip_type == "one-way" %}
-
-                      <option value="one-way" id="id1">one-way</option>
-                    {% elif trip_type == "round-trip" %}  
-                    
-                      <option value="round-trip" id="id2">round-trip</option>
-                    {% else %}  
-                    
-                      <option value="return1" id="id3">return</option>
-                    {% endif %}  
+        <div class="col-md-2 mb-1">
+          <div class="container">
+                  <div class="row">
+                      <select class="form-select tm-select my-1" aria-label="Default select example" style="font-size: 147%;">
+                          <option value="one-way" id="id1">one-way</option>
+                          <option value="round-trip" id="id2">round-trip</option>
+                          <option value="return1" id="id3">return</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
+      <div class="col-md-2 mb-1">
+          <div class="container">
+              <div class="row">
+                  <select class="form-select tm-select my-1" aria-label="Default select example" style="font-size: 147%;">
+                      <option value="small">small</option>
+                      <option value="medium">medium</option>
+                      <option value="large">large</option>
                   </select>
+
                   
               </div>
-          <div class="col-md-2">
-              
-              <select name="laguage_type" class="form-control tm-select" id="laguage_type">
-                 {% if laguage_type == "small" %}
-                  <option value="small">small</option>
-                 {% elif laguage_type == "medium" %}  
-
-                  <option value="medium">medium</option>
-                 {% else %} 
-                  <option value="large">large</option> 
-                  {% endif %}   
-              </select>
           </div>
+      </div>
       </div>
       <div class="row pt-2">
           
@@ -86,7 +80,7 @@
           </div>
           <div class="col-md-2" id="h">
               <div class="form-group">
-                  <input type="text" class="form-control" name="frmDateReg" id="retuntype" placeholder="Return" value="{{frmDateReg}}">
+                  <input type="text" class="form-control" name="frmDateReg" id="inputCheckIn" placeholder="Return" value="{{frmDateReg}}">
               </div>
           </div>
           <div class="col-md-2">
@@ -102,16 +96,19 @@
 <div class="container pt-5 pb-5">
     <div class="col-md-8 offset-md-2 col-sm-8 offset-sm-4 shadow pt-2 pb-2">
     <small><i class="far fa-arrow-circle-down fa-2x"></i>Send my carry-on from Los Angeles on  </small><br/>         
-    <table class="table table-striped">
-      <tbody>
-        <tr>
-        <td><input type="radio" name="colors" id="red"></td>
-        <td><strong class="text-primary">Shadow</strong><b class="text-danger">fax</b></td>
-          <td><b>Wednesday,december29</b></td>
-          <td><b>$29.66</b></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+          <td><input type="radio" name="colors" id="red"></td>
+          <td><strong class="text-primary">Shadow</strong><b class="text-danger">fax</b></td>
+            <td><b>Wednesday,december29</b></td>
+            <td><b>$29.66</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <small>Deliver to Baltimore by Friday, December 31</small>
 </div>
 </div>

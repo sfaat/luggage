@@ -36,94 +36,262 @@
 <form action="{% url 'search_location' %}" method="POST">
     {% csrf_token %}
    
-<div class="jumbotron" style="background-color:rgb(28, 11, 124);padding:2%">
+<div class="jumbotron" style="background-color:rgb(28, 11, 124);">
     <div class="row">
-            <div class="col-md-2">
-                <select name="trip_type" class="form-control tm-select" id="trip_type" onchange="changeTrip()">
-                    <option value="one-way" id="id1">one-way</option>
-                    <option value="round-trip" id="id2">round-trip</option>
-                    <option value="return1" id="id3">return</option>
-                </select>
-            </div>
-        <div class="col-md-2">
-            <select name="laguage_type" class="form-control tm-select" id="laguage_type">
+        <div class="col-md-2 mb-1">
+          <div class="container">
+                  <div class="row">
+                      <select class="form-select tm-select my-1" aria-label="Default select example" style="font-size: 147%;">
+                          <option value="one-way" id="id1">one-way</option>
+                          <option value="round-trip" id="id2">round-trip</option>
+                          <option value="return1" id="id3">return</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
+      <div class="col-md-2 mb-1">
+          <div class="container">
+              <div class="row">
+                  <select class="form-select tm-select my-1" aria-label="Default select example" style="font-size: 147%;">
+                      <option value="small">small</option>
+                      <option value="medium">medium</option>
+                      <option value="large">large</option>
+                  </select>
+
+                  
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="row pt-2">
+          
+          <div class="col-md-4">
+              <div class="form-group">
+                  
+                  <input name="from1" type="text" class="form-control " id="from1" placeholder="From....." value="{{from1}}">
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="form-group">
+                  
+                <input name="to" type="text" class="form-control" id="to1" placeholder="To...."  value="{{to}}"> 
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="form-group">
+                  
+                  <input name="inputCheckIn" type="text" class="form-control" id="inputCheckIn" placeholder="Arrival"  value="{{inputCheckIn}}">
+              </div>
+          </div>
+          <div class="col-md-2" id="h">
+              <div class="form-group">
+                  <input type="text" class="form-control" name="frmDateReg" id="retuntype" placeholder="Return" value="{{frmDateReg}}">
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="form-group">
+                  <button type="submit" id="ret" class="btn btn-info tm-btn-search">Search</button>
+              </div>
+          </div>
+      
+      </div>
+  
+  </div>
+
+
+ <!-- <div class="container">
+     <div class="row">
+         <div class="col-lg-6 col-md-6 col-sm-12">
+            <select class="form-select form-select-lg mb-3" aria-label="Default select example">
+                <option value="one-way" id="id1">one-way</option>
+                <option value="round-trip" id="id2">round-trip</option>
+                <option value="return1" id="id3">return</option>
+            </select>
+         </div>
+         <div class="col-lg-6 col-md-6 col-sm-12">
+            <select class="form-select form-select-lg mb-3" aria-label="Default select example">
                 <option value="small">small</option>
                 <option value="medium">medium</option>
                 <option value="large">large</option>
             </select>
+         </div>
+     </div>
+
+     <div class="row">
+         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+
+         </div>
+         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"></div>
+         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"></div>
+         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"></div>
+
+     </div>
+ </div>
+ -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table  table-striped">
+                        <thead>
+                          <tr>
+                              <p><span><i class="far fa-arrow-circle-down fa-2x" style="font-size: 100%;"></i></span> Send my carry-on from Los Angeles on</p>
+                          </tr>  
+                          
+                            <tr>
+                                <th scope="col"><input type="radio"></th>
+                                <th scope="col"><strong class="text-primary">Blue</strong><b class="text-danger">Dart</b></th>
+                                <th scope="col"><a href="{% url 'price' %}">Wednesday,december29</a></th>
+                                <th scope="col">$29.66</th>
+                                
+                            </tr>
+                          
+                        </thead>
+                        <tbody >
+                          <tr>
+                            <th scope="row"><input type="radio" name="colors" id="red"></th>
+                            <td><strong class="text-primary">Delhi</strong><b class="text-danger">Very</b></td>
+                            <td><a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
+                            <td><b>$29.66</b></td>
+                          </tr>
+        
+                          <tr>
+                            <th scope="row"><input type="radio" name="colors" id="red"></th>
+                            <td><strong class="text-danger">Mi</strong><b class="text-primary">mo</b></td>
+                            <td><a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
+                            <td><b>$29.66</b></td>
+                          </tr>
+        
+                          <tr>
+                            <th scope="row"><input type="radio" name="colors" id="red"></th>
+                            <td><strong class="text-danger">Shadow</strong><b class="text-primary">fax</b></td>
+                            <td><a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
+                            <td><b>$29.66</b></td>
+                          </tr>
+                        
+                        </tbody>
+                      </table>
+
+                </div>
+                
+                  <div>
+                      <p>
+                        Deliver to Baltimore by Friday, December 31
+                    </p>
+                  </div>
+            </div>
         </div>
     </div>
 
-    <div class="row pt-2">
-        <div class="col-md-4">
-            <div class="form-group">  
-                <input name="from1" type="text" class="form-control " id="from" placeholder="From....." value={{from1}}>
+</section>
+
+  
+ 
+
+
+
+<!-- <section class="text-center">
+    <div class="jumbotron" style="background-color:rgb(28, 11, 124);">
+        
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6 py-3">
+                            <select class="form-select tm-select" aria-label="Default select example" style="font-size: 179%;">
+                                <option value="one-way" id="id1">one-way</option>
+                                <option value="round-trip" id="id2">round-trip</option>
+                                <option value="return1" id="id3">return</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 py-3">
+                            <select class="form-select tm-select" aria-label="Default select example" style="font-size: 179%;">
+                                <option value="small">small</option>
+                                <option value="medium">medium</option>
+                                <option value="large">large</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6"></div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <input name="to" type="text" class="form-control" id="to" placeholder="To...." value={{to}}>
+    
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">  
+                        <input name="from1" type="text" class="form-control " id="from" placeholder="From....." value={{from1}}>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input name="to" type="text" class="form-control" id="to" placeholder="To...." value={{to}}>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        
+                        <input name="inputCheckIn" type="text" class="form-control" id="inputCheckIn" placeholder="Arrival" value={{inputCheckIn}}>
+                    </div>
+                </div>
+                <div class="col-md-2" id="return">
+                    <div class="form-group">
+                        <input type="date" class="form-control" name="frmDateReg" placeholder="Return" value={{frmDateReg}}>
+                    </div>
+                </div>
+                <div class="col-md-2" id="s1">
+                    <button type="submit" value="submit"class="btn btn-info tm-btn-search">Search</button>            
+                </div>
             </div>
-        </div>
-        <div class="col-md-2">
-            <div class="form-group">
+    </div>
+</section> 
+
+
+<section class="text-center">
+    <div class="jumbotron">
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                      <p><span><i class="far fa-arrow-circle-down fa-2x" style="font-size: 100%;"></i></span> Send my carry-on from Los Angeles on</p>
+                  </tr>  
+                    <tr>
+                        <th scope="col"><input type="radio" name="colors" id="red"></th>
+                        <th scope="col"><strong class="text-primary">Blue</strong><b class="text-danger">Dart</b></th>
+                        <th scope="col"><a href="{% url 'price' %}"><b>Wednesday,december29</b></a></th>
+                        <th scope="col"><b>$29.66</b></th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                  <tr>
+                    <th scope="row"><input type="radio" name="colors" id="red"></th>
+                    <td><strong class="text-primary">Delhi</strong><b class="text-danger">Very</b></td>
+                    <td><a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
+                    <td><b>$29.66</b></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><input type="radio" name="colors" id="red"></th>
+                    <td><strong class="text-danger">Mi</strong><b class="text-primary">mo</b></td>
+                    <td><a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
+                    <td><b>$29.66</b></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row"><input type="radio" name="colors" id="red"></th>
+                    <td><strong class="text-danger">Shadow</strong><b class="text-primary">fax</b></td>
+                    <td><a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
+                    <td><b>$29.66</b></td>
+                  </tr>
                 
-                <input name="inputCheckIn" type="text" class="form-control" id="inputCheckIn" placeholder="Arrival" value={{inputCheckIn}}>
-            </div>
-        </div>
-        <div class="col-md-2" id="return">
-            <div class="form-group">
-                <input type="date" class="form-control" name="frmDateReg" placeholder="Return" value={{frmDateReg}}>
-            </div>
-        </div>
-        <div class="col-md-2" id="s1">
-            <button type="submit" value="submit"class="btn btn-info tm-btn-search">Search</button>            
+                </tbody>
+              </table>
+              <div>
+                  <p>
+                    Deliver to Baltimore by Friday, December 31
+                </p>
+              </div>
         </div>
     </div>
-</div>
-</form>
-</div
-
-<div class="container jumbotron">
-    <div class="col-md-8 offset-md-2 col-sm-8 offset-sm-4 shadow pt-5 pb-5">
-    <small><i class="far fa-arrow-circle-down fa-2x"></i>Send my carry-on from Los Angeles on  </small><br/>         
-    <table class="table table-striped">
-        <tbody>
-            <tr>
-                <td><input type="radio" name="colors" id="red"></td>
-                <td><strong class="text-primary">Delhi</strong><b class="text-danger">Very</b></td>
-                <td> <a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
-                <td><b>$29.66</b></td>
-            </a>
-            </tr>
-            <tr>
-                <td><input type="radio" name="colors" id="red"></td>
-                <td><strong class="text-danger">Shadow</strong><b class="text-primary">fax</b></td>
-                
-                <td> <a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
-                <td><b>$29.66</b></td>
-            </tr>
-
-            <tr>
-                <td><input type="radio" name="colors" id="red"></td>
-                <td><strong class="text-danger">Mi</strong><b class="text-primary">mo</b></td>
-                
-                <td> <a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
-                <td><b>$29.66</b></td>
-            </tr>
-
-
-            <tr>
-            <td><input type="radio" name="colors" id="red"></td>
-            <td><strong class="text-primary">Blue</strong><b class="text-danger">Dart</b></td>
-              
-              <td> <a href="{% url 'price' %}"><b>Wednesday,december29</b></a></td>
-              <td><b>$29.66</b></td>
-            </tr>
-          </tbody>
-    </table>
-    <small>Deliver to Baltimore by Friday, December 31</small>
-</div>
-</div>
+</section> -->
 
 {% endblock content %}

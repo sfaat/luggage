@@ -36,7 +36,7 @@
 <form action="{% url 'booknow' %}" method="POST">
     {% csrf_token %}
 <div class="jumbotron" style="background-color:rgb(28, 11, 124);padding:2%">
-    <div class="row">
+    {% comment %} <div class="row">
             <div class="col-md-2">
                 <select name="trip_type" class="form-control tm-select" id="trip_type" onchange="changeTrip(false)">
                     <option value="one-way" id="id1">one-way</option>
@@ -51,7 +51,35 @@
                 <option value="large">large</option>
             </select>
         </div>
+    </div> {% endcomment %}
+
+    <div class="row">    
+        <div class="col-md-2 mb-3">
+            <div class="container">
+                <div class="row">
+                    <select class="form-select tm-select" aria-label="Default select example" style="font-size: 179%;">
+                        <option value="one-way" id="id1">one-way</option>
+                        <option value="round-trip" id="id2">round-trip</option>
+                        <option value="return1" id="id3">return</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    <div class="col-md-2 mb-3">
+        <div class="container">
+            <div class="row">
+                <select class="form-select form-select-lg mb-3"  style="font-size: 184%; text-align: center;">
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                </select>
+
+                
+            </div>
+        </div>
     </div>
+</div>
+
     <div class="row pt-2">
         <div class="col-md-4">
             <div class="form-group">  
