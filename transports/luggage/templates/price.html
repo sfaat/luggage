@@ -8,7 +8,7 @@
                 <nav class="navbar navbar-expand-lg narbar-light">
                     {% block nav %}
                         <img src="{% static 'assets/img/PoterFax1.png' %}" width="20%" height="80%">
-                    <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button type="button" id="nav-toggle" class="navbar-toggler collapsed mt-3" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
@@ -80,7 +80,7 @@
           </div>
           <div class="col-md-2" id="h">
               <div class="form-group">
-                  <input type="text" class="form-control" name="frmDateReg" id="inputCheckIn" placeholder="Return" value="{{frmDateReg}}">
+                <input type="text" class="form-control" name="date1" id="date1" placeholder="Return" value="">
               </div>
           </div>
           <div class="col-md-2">
@@ -160,8 +160,4 @@
           </div>
 </div>
 </div>
-
-
-<script>
-</script>
 {% endblock content %}

@@ -443,6 +443,26 @@ video {
 	font-weight: 300;
 }
 
+@media only screen and (max-width: 600px) {
+    #tm-section-1 {
+        background-image: url('../img//Fly Poter/Banner_4_1400-x-515px.jpg');
+        /* background-color: rgb(34, 39, 122); */
+        height: 528px;
+		
+    }
+  }
+
+  /* @media only screen and (min-width: 600px) {
+    #tm-section-1 {
+        background-image: url('../img//Fly Poter/Banner_4_1400-x-515px.jpg');
+        
+        height: 528px;
+		
+    }
+  }   */
+
+  
+
 .clearfix:after {
    content: " "; /* Older browser do not support empty content */
    visibility: hidden;

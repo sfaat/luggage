@@ -24,13 +24,7 @@ def home(request):
     return render(request, 'index.html')
 
 def price(request):
-    # trip_type=request.COOKIES["trip_type"]
-    # laguage_type=request.COOKIES["laguage_type"]
-    # from1=request.COOKIES["from1"]
-    # to=request.COOKIES["to"]
-    # inputCheckIn=request.COOKIES["inputCheckIn"]
-    # frmDateReg=request.COOKIES["frmDateReg"]
-    # contaxt={"trip_type":trip_type,"laguage_type":laguage_type,"from1":from1,"to":to,"inputCheckIn":inputCheckIn,"frmDateReg":frmDateReg}
+    
     return render(request, 'price.html')
 
 
@@ -40,13 +34,7 @@ def booknow1(request):
 
 
 def booknow(request):
-    # trip_type=request.COOKIES["trip_type"]
-    # laguage_type=request.COOKIES["laguage_type"]
-    # from1=request.COOKIES["from1"]
-    # to=request.COOKIES["to"]
-    # inputCheckIn=request.COOKIES["inputCheckIn"]
-    # frmDateReg=request.COOKIES["frmDateReg"]
-    # contaxt={"trip_type":trip_type,"laguage_type":laguage_type,"from1":from1,"to":to,"inputCheckIn":inputCheckIn,"frmDateReg":frmDateReg}
+    
     return render(request,'book.html')
 
 

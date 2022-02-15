@@ -99,11 +99,11 @@ https://www.tooplate.com/view/2095-level
                         <nav class="navbar navbar-expand-lg narbar-light">
                             {% block nav %}
                             <!-- <a class="navbar-brand mr-auto text-primary" href="#"> -->
-                              <img src="{% static 'assets/img/PoterFax1.png' %}" width="20%" height="80%">
+                              <img src="{% static 'assets/img/PoterFax1.png' %}" width="20%" height="80%" class="pt-3">
                               <!-- <i class="fad fa-plane text-danger"></i>
                                 FL<b class="text-danger">YY</b>PORTER-->
                             <!-- </a>  -->
-                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed mt-3" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div id="mainNav" class="collapse navbar-collapse" style="margin-top: 0px;">
@@ -114,12 +114,6 @@ https://www.tooplate.com/view/2095-level
                                   <li class="nav-item">
                                     <a class="nav-link" href="{% url 'how-it-works' %}">How It Works</a>
                                   </li>
-                                  <!-- <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'features' %}">Features</a>
-                                  </li> -->
-                                  <!-- <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-6">Contact</a>
-                                  </li> -->
                                   <li class="nav-item">
                                     <a class="nav-link" href="{% url 'booknow' %}">Book Now</a>
                                   </li>
@@ -266,6 +260,9 @@ https://www.tooplate.com/view/2095-level
 
             // Date Picker
             const pickerCheckIn = datepicker('#inputCheckIn');
+            const date1 = datepicker('#date1');
+            
+
             const pickerCheckOut = datepicker('#inputCheckOut');
             
             // Slick carousel

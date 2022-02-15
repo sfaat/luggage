@@ -1,0 +1,7 @@
+@media only screen and (max-width: 600px) {
+    #tm-section-1 {
+        background-image: url(../img//FlyPoter/Banner_4_1400-x-515px.jpg);
+        /* background-color: rgb(34, 39, 122); */
+        height: 528px;
+    }
+  }
