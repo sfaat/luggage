@@ -114,8 +114,11 @@ def customerlogout(request):
 		request.session.flush()
 		return redirect('/customerlogin/')
 
+
+import ipdb
 def updateprofile(request):
     if request.method == "POST":
+        # ipdb.set_trace()
         nm = request.POST.get('Name')
         Address = request.POST.get('Address')
         Emailid = request.POST.get('Emailid')
@@ -124,12 +127,12 @@ def updateprofile(request):
         Postcode = request.POST.get('Postcode')
         email = request.session['email']
         data = Customer.objects.get(emailid=email)
-        data.name = nm,
-        data.address = Address,
-        data.mobile = mobileno,
-        data.emailid = Emailid,
-        data.postcode = Postcode,
-        data.password = Password,
+        data.name = nm
+        data.address = Address
+        data.mobile = mobileno
+        data.emailid = Emailid
+        data.postcode = Postcode
+        data.password = Password
         data.save()
         return render(request,'adminpanel/customerprofile.html',{'data':data})
     else:
@@ -140,16 +143,17 @@ def updateprofile(request):
 
 def customerlogin(request):
     if request.method == "POST":
-        email = request.POST.get('email')
-        password = request.POST.get('password')
+        # email = request.POST['email']
+        # password = request.POST['password']
         try:
-            user = Customer.objects.get(emailid=email,password=password)
-            user.save()
+            # user = Customer.objects.get(emailid=email,password=password)
+            # request.session['email'] = email
+            login = Customer.objects.get(emailid=request.POST['email'], password=request.POST['password']) 
+            request.session['email'] = request.POST['email']
+            return redirect('/customerdashboard/')
         except:
             messages.success(request, 'Password or Username is incorrect!!!')
             return redirect('/customerlogin/')
-        request.session['email'] = email
-        return redirect('/customerdashboard/')
     else:
         return render(request,'adminpanel/customerlogin.html')
 
@@ -216,7 +220,14 @@ def contactus(request):
     
     
     return render(request,'index.html')
-    
+
+def table1(request):
+    return render(request,"table1.html")
+
+
+def adminetable(request):
+    return render(request,"adminpanel/adminetable.html")
+
         
       
 

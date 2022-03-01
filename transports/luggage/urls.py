@@ -40,6 +40,8 @@ urlpatterns = [
     path('calculator/', views.calculator, name='calculator'),
     path('booknow1/', views.booknow1, name='booknow1'),
     path('contactus/', views.contactus, name='contactus'),
+    path('table1/', views.table1, name='table1'),
+    path('adminetable/', views.adminetable, name='adminetable'),
 
 
     
