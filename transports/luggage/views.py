@@ -199,7 +199,6 @@ def contactus(request):
         phone=request.POST.get('phone')
         subject=request.POST.get('subject')
         message=request.POST.get('message')
-        # email = settings.EMAIL_HOST_USER
         data={
             'name':name,
             'email':email,

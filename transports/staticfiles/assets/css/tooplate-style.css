@@ -131,9 +131,27 @@ p {
 
 #tm-section-1 {	
 	background-image: url('../img//Fly Poter/Banner_4_1400-x-515px.jpg');	
-	/* background-color: rgb(34, 39, 122); */
 	height: 515px;
 }
+
+@media only screen and (max-width: 600px) {
+    #tm-section-1 {
+		width: 100%;
+        background-image: url('../img/Fly Poter/Mobile-slide-Images.jpg');
+    }
+	#hed{
+		
+        visibility: hidden;
+	}
+
+	#hlo1{
+		text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+	}
+}
+
+
 
 #tm-section-5 { background-image: url('../img/bg-img-2.jpg'); }
 
@@ -443,23 +461,8 @@ video {
 	font-weight: 300;
 }
 
-@media only screen and (max-width: 600px) {
-    #tm-section-1 {
-        background-image: url('../img//Fly Poter/Banner_4_1400-x-515px.jpg');
-        /* background-color: rgb(34, 39, 122); */
-        height: 528px;
-		
-    }
-  }
 
-  /* @media only screen and (min-width: 600px) {
-    #tm-section-1 {
-        background-image: url('../img//Fly Poter/Banner_4_1400-x-515px.jpg');
-        
-        height: 528px;
-		
-    }
-  }   */
+
 
   
 
